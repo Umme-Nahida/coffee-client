@@ -36,11 +36,11 @@ const AddCoffe = () => {
               <div className="md:flex md:gap-x-5">
                 <div className="form-control md:w-1/2">
                   <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text">Supplier</span>
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    name="Supplier"
                     placeholder="Enter your name"
                     className="input input-bordered w-full"
                     required
@@ -48,11 +48,11 @@ const AddCoffe = () => {
                 </div>
                 <div className="form-control md:w-1/2">
                   <label className="label">
-                    <span className="label-text">Chef</span>
+                    <span className="label-text">Taste</span>
                   </label>
                   <input
                     type="text"
-                    name="quantity"
+                    name="Taste"
                     placeholder="Enter your chef name"
                     className="input input-bordered"
                     required
@@ -63,11 +63,11 @@ const AddCoffe = () => {
               <div className="md:flex md:gap-x-5">
                 <div className="form-control md:w-1/2">
                   <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text">Category</span>
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    name="category"
                     placeholder="Enter your name"
                     className="input input-bordered w-full"
                     required
@@ -75,38 +75,11 @@ const AddCoffe = () => {
                 </div>
                 <div className="form-control md:w-1/2">
                   <label className="label">
-                    <span className="label-text">Chef</span>
+                    <span className="label-text">Details</span>
                   </label>
                   <input
                     type="text"
-                    name="quantity"
-                    placeholder="Enter your chef name"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-              </div>
-                {/* row-1 */}
-              <div className="md:flex md:gap-x-5">
-                <div className="form-control md:w-1/2">
-                  <label className="label">
-                    <span className="label-text">Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter your name"
-                    className="input input-bordered w-full"
-                    required
-                  />
-                </div>
-                <div className="form-control md:w-1/2">
-                  <label className="label">
-                    <span className="label-text">Chef</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="quantity"
+                    name="Details"
                     placeholder="Enter your chef name"
                     className="input input-bordered"
                     required
@@ -115,19 +88,14 @@ const AddCoffe = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Photo</span>
                 </label>
                 <input
-                  type="password"
-                  placeholder="password"
+                  type="photo"
+                  placeholder="enter your photo"
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
