@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import bgImg from "../images/more/11.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const AddCoffe = () => {
   const handleForm = (e) => {
@@ -43,11 +44,13 @@ const AddCoffe = () => {
   };
   return (
     <div className="py-20" style={{ backgroundImage: `url(${bgImg})` }}>
-      <div className="mx-auto max-w-[800px] bg-[#F4F3F0] p-16">
-        <h3 className="flex items-center gap-x-2">
+      <Link to='/'>
+        <h3 className="flex items-center gap-x-2 pl-[270px] pb-5 ">
           <FaArrowLeftLong></FaArrowLeftLong>
           Back to Home
         </h3>
+      </Link>
+      <div className="mx-auto max-w-[800px] bg-[#F4F3F0] p-16">
         <form onSubmit={handleForm}>
           {/* row-1 */}
           <div className="md:flex md:gap-x-5">
