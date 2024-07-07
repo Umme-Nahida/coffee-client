@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import bgImg from "../images/more/11.png";
 
 const AddCoffe = () => {
@@ -11,8 +12,9 @@ const AddCoffe = () => {
     const taste = form.taste.value;
     const category = form.category.value;
     const details = form.details.value;
+    const price = form.price.value;
     const photo = form.photo.value;
-    const coffee={name,chef,supplier,taste,category,details,photo}
+    const coffee={name,chef,supplier,taste,category,details,price,photo}
     console.log(coffee)
     fetch("http://localhost:5000/addcoffee",{
       method:"POST",
@@ -26,6 +28,9 @@ const AddCoffe = () => {
     .then(res=> res.json())
     .then(data =>{
       console.log(data)
+      if(data.insertedId){
+        toast.success('Coffee Successfully added!')
+      }
       e.target.reset();
     })
   }
@@ -114,17 +119,32 @@ const AddCoffe = () => {
                   />
                 </div>
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Photo</span>
-                </label>
-                <input
-                  type="url"
-                  name="photo"
-                  placeholder="enter your photo"
-                  className="input input-bordered"
-                  required
-                />
+                {/* row-4*/}
+              <div className="md:flex md:gap-x-5">
+                <div className="form-control md:w-1/2">
+                  <label className="label">
+                    <span className="label-text">Price</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="price"
+                    placeholder="Enter your price"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                </div>
+                <div className="form-control md:w-1/2">
+                  <label className="label">
+                    <span className="label-text">Photo</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="photo"
+                    placeholder="Enter your photo url"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
               </div>
               <div className="form-control mt-6">
                 <button type="submit" className="btn bg-[#6F4E37] hover:bg-[#81593d] text-white">Login</button>
