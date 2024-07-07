@@ -13,7 +13,7 @@ const AddCoffe = () => {
     const details = form.details.value;
     const photo = form.photo.value;
     const coffee={name,chef,supplier,taste,category,details,photo}
-    // console.log(coffee)
+    console.log(coffee)
   }
   return (
     <div className="py-20" style={{ backgroundImage: `url(${bgImg})` }}>
