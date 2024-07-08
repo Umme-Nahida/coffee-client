@@ -1,9 +1,10 @@
 import { FaEye } from "react-icons/fa";
 import { FaPen } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CardProduct = ({ coffee,deleteCoffee }) => {
+const CardProduct = ({ coffee, deleteCoffee }) => {
   console.log(coffee);
   const { name, chef, supplier, taste, category, details, price, photo, _id } =
     coffee;
@@ -27,7 +28,7 @@ const CardProduct = ({ coffee,deleteCoffee }) => {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              deleteCoffee(_id)
+              deleteCoffee(_id);
               Swal.fire({
                 title: "Deleted!",
                 text: "coffee has been deleted.",
@@ -57,12 +58,14 @@ const CardProduct = ({ coffee,deleteCoffee }) => {
             >
               <FaEye></FaEye>
             </button>
-            <button
-              className="btn btn-sm bg-black hover:bg-black text-white lg:tooltip lg:tooltip-left tooltip-info"
-              data-tip="Edit"
-            >
-              <FaPen></FaPen>
-            </button>
+            <Link to={`/details/${_id}`}>
+              <button
+                className="btn btn-sm bg-black hover:bg-black text-white lg:tooltip lg:tooltip-left tooltip-info"
+                data-tip="Edit"
+              >
+                <FaPen></FaPen>
+              </button>
+            </Link>
             <button
               onClick={() => handleDeleteCoffee(_id)}
               className="btn btn-sm bg-red-500 hover:bg-red-600 text-white lg:tooltip lg:tooltip-left tooltip-info"
