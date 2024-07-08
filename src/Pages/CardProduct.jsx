@@ -52,20 +52,20 @@ const CardProduct = ({ coffee,deleteCoffee }) => {
         <div className="card-actions justify-end mr-5 my-2">
           <div className=" join join-vertical space-y-2">
             <button
-              className="btn btn-sm btn-primary lg:tooltip lg:tooltip-left tooltip-info"
+              className="btn btn-sm bg-[#E3B577] hover:bg-[#ecb452] text-white lg:tooltip lg:tooltip-left tooltip-info"
               data-tip="Details"
             >
               <FaEye></FaEye>
             </button>
             <button
-              className="btn btn-sm btn-primary lg:tooltip lg:tooltip-left tooltip-info"
+              className="btn btn-sm bg-black hover:bg-black text-white lg:tooltip lg:tooltip-left tooltip-info"
               data-tip="Edit"
             >
               <FaPen></FaPen>
             </button>
             <button
               onClick={() => handleDeleteCoffee(_id)}
-              className="btn btn-sm btn-primary lg:tooltip lg:tooltip-left tooltip-info"
+              className="btn btn-sm bg-red-500 hover:bg-red-600 text-white lg:tooltip lg:tooltip-left tooltip-info"
               data-tip="Delete"
             >
               <MdDelete></MdDelete>
