@@ -8,7 +8,7 @@ const Details = () => {
     DetailsData;
   return (
     <div className="py-10">
-     <BackHome></BackHome>
+     <div className="-ml-10"><BackHome></BackHome></div>
       <div className="flex items-center justify-center">
         <div className="hero bg-base-200 h-[500px] w-[900px]">
           <div className="hero-content flex-col lg:flex-row gap-10">
